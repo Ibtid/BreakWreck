@@ -13,8 +13,7 @@ public final class Frame extends JFrame{
        setTitle("BRICKWRECK");
        setResizable(false);
        setVisible(true);
-       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
+       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
     }
     
     public void getIcon(){
