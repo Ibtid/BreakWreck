@@ -23,11 +23,13 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
     private Bricks brick;
     private Padle padle;
     private Ball ball;
+    Music music;
     
     public Gameplay(){
        padle = new Padle();
        brick = new Bricks (4,8);
        ball = new Ball();
+       music = new Music();
        addKeyListener(this);
        setFocusable(true);
        setFocusTraversalKeysEnabled(false);
@@ -68,6 +70,7 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             g.setColor(Color.RED);
             g.setFont(new Font("serif", Font.BOLD, 40));
             g.drawString("YOU WON!!!, Scores: "+score, 190, 300);
+            music.playMusic("Music\\\\strings.wav");
             
             g.setColor(Color.PINK);
             g.setFont(new Font("serif", Font.BOLD, 20));
@@ -81,7 +84,6 @@ public class Gameplay extends JPanel implements KeyListener, ActionListener{
             g.setColor(Color.RED);
             g.setFont(new Font("serif", Font.BOLD, 40));
             g.drawString("Game Over, Scores: "+score, 190, 300);
-            
             g.setColor(Color.PINK);
             g.setFont(new Font("serif", Font.BOLD, 20));
             g.drawString("...Press Enter to Restart...", 280, 350);
